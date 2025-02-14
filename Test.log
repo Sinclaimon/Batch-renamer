@@ -7,3 +7,20 @@
 2024-06-21 20:48:55,097 - Test Logger 1.0.0 - WARNING - This would be a logger warning
 2024-06-21 20:48:55,097 - Test Logger 1.0.0 - ERROR - This would be a logger error!!
 2024-06-21 20:48:55,098 - Test Logger 1.0.0 - CRITICAL - This would be a critical log
+2025-02-14 17:22:51,649 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:22:51,650 - Test Logger 1.0.0 - WARNING - This would be a logger warning
+2025-02-14 17:22:51,650 - Test Logger 1.0.0 - ERROR - This would be a logger error!!
+2025-02-14 17:22:51,650 - Test Logger 1.0.0 - CRITICAL - This would be a critical log
+2025-02-14 17:22:53,179 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:22:53,179 - Test Logger 1.0.0 - WARNING - This would be a logger warning
+2025-02-14 17:22:53,179 - Test Logger 1.0.0 - ERROR - This would be a logger error!!
+2025-02-14 17:22:53,179 - Test Logger 1.0.0 - CRITICAL - This would be a critical log
+2025-02-14 17:41:37,414 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:48:06,744 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:51:57,621 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:52:09,978 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:52:23,772 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:53:10,090 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:53:10,092 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_files
+2025-02-14 17:53:17,029 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 17:53:17,030 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_files

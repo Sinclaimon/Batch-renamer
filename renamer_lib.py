@@ -38,6 +38,14 @@ def get_renamed_file_path(existing_name, string_to_find, string_to_replace,
     pass
 
 def get_files_with_extension(folder_path, extension):
+
+    logger = get_logger(True)
+    logger.info("Getting files with extension: " + extension + " in folder: " + folder_path)
+
+    for file in folder_path:
+        if file.endswith(extension):
+            get_logger().log()
+            print(file)
     """
     Returns a collection of files in a given folder with an extension that 
     matches the provided extension
@@ -122,9 +130,12 @@ def main():
     logger.info('Logger Initiated')
 
     #   Here are some examples of different logger messages
-    logger.warning('This would be a logger warning')
-    logger.error('This would be a logger error!!')
-    logger.critical('This would be a critical log')
+    
+    #logger.warning('This would be a logger warning')
+    #logger.error('This would be a logger error!!')
+    #logger.critical('This would be a critical log')
+
+    get_files_with_extension("testing_files", "ma")
 
 
 if __name__ == '__main__':

@@ -1,0 +1,3 @@
+Ideas for extra features: 
+Have the files moved to predetermined folders as well (further cleanup) 
+a python code to reset the testing files to their original state
