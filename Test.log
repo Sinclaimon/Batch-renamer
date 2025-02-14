@@ -49,3 +49,25 @@
 2025-02-14 18:22:56,953 - Test Logger 1.0.0 - INFO - added a matching file: grass_file_01.ma
 2025-02-14 18:22:56,960 - Test Logger 1.0.0 - INFO - added a matching file: metal_file_01.ma
 2025-02-14 18:22:56,960 - Test Logger 1.0.0 - INFO - added a matching file: rock_file_final_new_02.ma
+2025-02-14 18:25:12,489 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 18:25:12,490 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_files
+2025-02-14 18:25:12,490 - Test Logger 1.0.0 - INFO - added a matching file: grass_file_01.ma
+2025-02-14 18:25:12,490 - Test Logger 1.0.0 - INFO - added a matching file: metal_file_01.ma
+2025-02-14 18:25:12,491 - Test Logger 1.0.0 - INFO - added a matching file: rock_file_final_new_02.ma
+2025-02-14 18:25:12,491 - Test Logger 1.0.0 - ERROR - Folder path does not exist
+2025-02-14 18:27:47,896 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 18:27:47,896 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_files
+2025-02-14 18:27:47,897 - Test Logger 1.0.0 - INFO - added a matching file: grass_file_01.ma
+2025-02-14 18:27:47,897 - Test Logger 1.0.0 - INFO - added a matching file: metal_file_01.ma
+2025-02-14 18:27:47,897 - Test Logger 1.0.0 - INFO - added a matching file: rock_file_final_new_02.ma
+2025-02-14 18:27:47,898 - Test Logger 1.0.0 - ERROR - Folder path does not exist
+2025-02-14 18:29:09,233 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-14 18:29:09,234 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_files
+2025-02-14 18:29:09,234 - Test Logger 1.0.0 - INFO - added a matching file: grass_file_01.ma
+2025-02-14 18:29:09,234 - Test Logger 1.0.0 - INFO - added a matching file: metal_file_01.ma
+2025-02-14 18:29:09,234 - Test Logger 1.0.0 - INFO - added a matching file: rock_file_final_new_02.ma
+2025-02-14 18:29:09,235 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_files
+2025-02-14 18:29:09,235 - Test Logger 1.0.0 - INFO - added a matching file: grass_file_01.ma
+2025-02-14 18:29:09,235 - Test Logger 1.0.0 - INFO - added a matching file: metal_file_01.ma
+2025-02-14 18:29:09,235 - Test Logger 1.0.0 - INFO - added a matching file: rock_file_final_new_02.ma
+2025-02-14 18:29:09,236 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_empty_folder

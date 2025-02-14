@@ -39,34 +39,6 @@ def get_renamed_file_path(existing_name, string_to_find, string_to_replace,
     pass
 
 def get_files_with_extension(folder_path, extension):
-
-    logger = get_logger(True)
-
-    #making sure the folder exists first
-    if os.path.isdir(folder_path) == False:
-        logger.error("Folder path does not exist")
-        return
-
-    logger.info("Getting files with extension: " + extension + " in folder: " + folder_path)
-
-    #getting all files in the folder
-    folder_files = next(os.walk(folder_path))[2]
-
-    #list to store all the files with the correct extension
-    matching_files = []
-
-    #iterating through all the files in the folder
-    for file in folder_files:
-        print("working on file: " + file)
-        
-        # Remove the dot from the extension
-        file_extension = os.path.splitext(file)[1][1:]  
-        print("file extension string only: " + file_extension)
-        if (file_extension == extension):
-            matching_files.append(file)
-            logger.info("added a matching file: " + file)
-
-    return matching_files
     """
     Returns a collection of files in a given folder with an extension that 
     matches the provided extension
@@ -84,7 +56,38 @@ def get_files_with_extension(folder_path, extension):
 
     Make sure to catch and handle errors if the folder doesn't exist!
     '''
-    pass
+    
+    logger = get_logger(True)
+
+    #making sure the folder exists first
+    if os.path.isdir(folder_path) == False:
+        logger.error("Folder path does not exist")
+        return
+    
+
+
+    logger.info("Getting files with extension: " + extension + 
+                " in folder: " + folder_path)
+
+    #getting all files in the folder
+    folder_files = next(os.walk(folder_path))[2]
+
+    #list to store all the files with the correct extension
+    matching_files = []
+
+    #iterating through all the files in the folder
+    for file in folder_files:
+        print("working on file: " + file)
+        
+        # Remove the dot from the extension
+        file_extension = os.path.splitext(file)[1][1:]  
+        print("file extension string only: " + file_extension)
+
+        if (file_extension == extension):
+            matching_files.append(file)
+            logger.info("added a matching file: " + file)
+
+    return matching_files
 
 def rename_file(logger, existing_name, new_name, copy=False):
     """
@@ -156,8 +159,8 @@ def main():
     #logger.error('This would be a logger error!!')
     #logger.critical('This would be a critical log')
 
-    #get_files_with_extension("testing_files", "ma")
     print(get_files_with_extension("testing_files", "ma"))
-    print(get_files_with_extension("testing_filess", "ma"))
+    print(get_files_with_extension("testing_files", "ma"))
+    print(get_files_with_extension("testing_empty_folder", "ma"))
 if __name__ == '__main__':
     main()
