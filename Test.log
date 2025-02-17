@@ -71,3 +71,78 @@
 2025-02-14 18:29:09,235 - Test Logger 1.0.0 - INFO - added a matching file: metal_file_01.ma
 2025-02-14 18:29:09,235 - Test Logger 1.0.0 - INFO - added a matching file: rock_file_final_new_02.ma
 2025-02-14 18:29:09,236 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_empty_folder
+2025-02-17 17:11:51,489 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:11:51,490 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:11:51,490 - Test Logger 1.0.0 - INFO - string to replace: _file_final_new_02
+2025-02-17 17:11:51,490 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:11:51,490 - Test Logger 1.0.0 - INFO - string to replace: _file_final_new_02
+2025-02-17 17:12:42,693 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:12:42,693 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:13:05,885 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:13:05,885 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:13:05,885 - Test Logger 1.0.0 - INFO - number of strings to replace: 18
+2025-02-17 17:13:05,885 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:13:05,885 - Test Logger 1.0.0 - INFO - number of strings to replace: 18
+2025-02-17 17:16:05,263 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:16:05,263 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:16:05,263 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:16:05,263 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:16:05,263 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:31:22,480 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:31:22,480 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:31:22,480 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:31:22,480 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:31:22,480 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:32:24,316 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:32:24,316 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:32:24,316 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:32:24,316 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:32:24,316 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:33:01,754 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:33:01,754 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:33:01,755 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:33:01,755 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:33:01,755 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:36:11,356 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:36:11,356 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:36:11,356 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:36:11,356 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:36:11,356 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:38:59,418 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:42:06,052 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:42:06,052 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:42:06,052 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:42:06,052 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/texture_grass_color.png
+2025-02-17 17:42:06,052 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:45:16,683 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:45:16,683 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/ma_file_01.ma
+2025-02-17 17:45:16,683 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:45:16,683 - Test Logger 1.0.0 - INFO - Getting renamed file path for: testing_files/texture_grass_color.png
+2025-02-17 17:45:16,683 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:45:41,220 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:45:41,220 - Test Logger 1.0.0 - INFO - Getting renamed file path for: ma_file_01.ma
+2025-02-17 17:45:41,220 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:45:41,220 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_grass_color.png
+2025-02-17 17:45:41,220 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:49:31,802 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:51:25,296 - Test Logger 1.0.0 - INFO - Logger Initiated
+2025-02-17 17:51:25,297 - Test Logger 1.0.0 - INFO - Getting renamed file path for: grass_file_01.ma
+2025-02-17 17:51:25,297 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:51:25,297 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_grass_color.png
+2025-02-17 17:51:25,297 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:59:42,618 - Test Logger 1.0.0 - INFO - Getting renamed file path for: grass_file_01.ma
+2025-02-17 17:59:42,619 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:59:42,620 - Test Logger 1.0.0 - INFO - Getting renamed file path for: metal_file_01.ma
+2025-02-17 17:59:42,621 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:59:42,622 - Test Logger 1.0.0 - INFO - Getting renamed file path for: rock_file_final_new_02.ma
+2025-02-17 17:59:42,622 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:59:42,624 - Test Logger 1.0.0 - INFO - Getting renamed file path for: hello_world.txt
+2025-02-17 17:59:42,624 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:59:42,674 - Test Logger 1.0.0 - INFO - Getting renamed file path for: lorem_ipsum.txt
+2025-02-17 17:59:42,674 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-17 17:59:42,678 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_grass_color.png
+2025-02-17 17:59:42,679 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:59:42,683 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_metal_diffuse.png
+2025-02-17 17:59:42,683 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-17 17:59:42,688 - Test Logger 1.0.0 - INFO - Getting renamed file path for: tex_rock_diffuse.png
+2025-02-17 17:59:42,688 - Test Logger 1.0.0 - INFO - number of strings to replace: 2

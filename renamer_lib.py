@@ -1,6 +1,6 @@
 import logger as logger
 import os
-from pathlib import Path
+import collections.abc as collections
 
 def get_logger(print_to_screen = False):
     """
@@ -13,7 +13,7 @@ def get_logger(print_to_screen = False):
     return logger.initialize_logger(print_to_screen)
 
 
-def get_renamed_file_path(existing_name, string_to_find, string_to_replace, 
+def get_renamed_file_path(logger, existing_name, string_to_find, string_to_replace, 
                           prefix, suffix):
     """
     Returns the target file path given an existing file name and 
@@ -36,22 +36,27 @@ def get_renamed_file_path(existing_name, string_to_find, string_to_replace,
     Make sure to support string_to_find being an array of multiple strings!  
         Hint: you may need to check its type...
     '''
-    
+
+    logger.info("Getting renamed file path for: " + existing_name)
     
 
+    #making string_to_find a tuple if it isn't already
+    if not isinstance(string_to_find, tuple):
+        string_to_find = [string_to_find]
 
-    logger = get_logger(True)
+    logger.info("number of strings to replace: " + str(len(string_to_find)))
 
     new_name = existing_name
 
-    if isinstance(string_to_find, list):
-        for i in range(len(string_to_find)):
-            new_name = new_name.replace(string_to_find[i], string_to_replace)
+    #replacing all strings in string_to_find with string_to_replace
+    for i in range(len(string_to_find)):
+        new_name = new_name.replace(string_to_find[i], string_to_replace)
 
-
+    
+    #make sure to check if its valid? 
     return prefix + new_name + suffix
 
-def get_files_with_extension(folder_path, extension):
+def get_files_with_extension(logger, folder_path, extension):
     """
     Returns a collection of files in a given folder with an extension that 
     matches the provided extension
@@ -69,8 +74,6 @@ def get_files_with_extension(folder_path, extension):
 
     Make sure to catch and handle errors if the folder doesn't exist!
     '''
-    
-    logger = get_logger(True)
 
     #making sure the folder exists first
     if os.path.isdir(folder_path) == False:
@@ -177,6 +180,11 @@ def main():
     print(get_files_with_extension("testing_files", "ma"))
     print(get_files_with_extension("testing_empty_folder", "ma"))
     '''
+
+    print("end result: " + get_renamed_file_path(logger, "grass_file_01.ma", 
+                                "_file_01", "M_", "", ""))
+    print("end result: " + get_renamed_file_path(logger, "texture_grass_color.png",
+                                   ("texture", "tex"), "T", "", ""))
 
 if __name__ == '__main__':
     main()
