@@ -36,7 +36,20 @@ def get_renamed_file_path(existing_name, string_to_find, string_to_replace,
     Make sure to support string_to_find being an array of multiple strings!  
         Hint: you may need to check its type...
     '''
-    pass
+    
+    
+
+
+    logger = get_logger(True)
+
+    new_name = existing_name
+
+    if isinstance(string_to_find, list):
+        for i in range(len(string_to_find)):
+            new_name = new_name.replace(string_to_find[i], string_to_replace)
+
+
+    return prefix + new_name + suffix
 
 def get_files_with_extension(folder_path, extension):
     """
@@ -159,8 +172,11 @@ def main():
     #logger.error('This would be a logger error!!')
     #logger.critical('This would be a critical log')
 
+    '''
     print(get_files_with_extension("testing_files", "ma"))
     print(get_files_with_extension("testing_files", "ma"))
     print(get_files_with_extension("testing_empty_folder", "ma"))
+    '''
+
 if __name__ == '__main__':
     main()
