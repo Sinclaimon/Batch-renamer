@@ -1,6 +1,6 @@
 import logger as logger
 import os
-import collections.abc as collections
+import shutil
 
 def get_logger(print_to_screen = False):
     """
@@ -109,7 +109,7 @@ def rename_file(logger, existing_name, new_name, copy=False):
     """
     Renames a file if it exists
     By default, should move the file from its original path to its new path--
-    removing the old file
+    removing the old file   
     If copy is set to True, duplicate the file to the new path
 
     Args:
@@ -125,7 +125,16 @@ def rename_file(logger, existing_name, new_name, copy=False):
     Copy files using shutil.copy
     make sure to import it at the top of the file
     '''
-    pass
+    try:
+        if copy:
+            shutil.copy(existing_name, new_name)
+            logger.info("Copied file: " + existing_name + " to " + new_name)
+        else:
+            os.rename(existing_name, new_name)
+            logger.info("Renamed file: " + existing_name + " to " + new_name)
+    except Exception as exception:
+        logger.error("Error renaming file: " + existing_name + " to " + new_name)
+        logger.error(exception)
 
 def rename_files_in_folder(logger, folder_path, extension, string_to_find,
                            string_to_replace, prefix, suffix, copy=False):
@@ -161,7 +170,12 @@ def rename_files_in_folder(logger, folder_path, extension, string_to_find,
                 - Use rename_file for this
         - Use the logger instance to document the process of the program
     '''
-    pass
+    matching_files = get_files_with_extension(logger, folder_path, extension)
+    for file in matching_files:
+        existing_file_name = os.path.join(folder_path, file)
+        new_file_name = get_renamed_file_path(logger, file, string_to_find, string_to_replace, prefix, suffix)
+        new_file_name = os.path.join(folder_path, new_file_name)
+        rename_file(logger, existing_file_name, new_file_name, copy)
 
 
 def main():
@@ -181,10 +195,10 @@ def main():
     print(get_files_with_extension("testing_empty_folder", "ma"))
     '''
 
-    print("end result: " + get_renamed_file_path(logger, "grass_file_01.ma", 
-                                "_file_01", "M_", "", ""))
-    print("end result: " + get_renamed_file_path(logger, "texture_grass_color.png",
-                                   ("texture", "tex"), "T", "", ""))
+    rename_files_in_folder(logger, "TART_assignment_02_files", "ma", "_file_01", "", "M_", "")
+    rename_files_in_folder(logger, "TART_assignment_02_files", "txt", "hello_world", "NOTE_hello_world", "", "_TEMP")
+    rename_files_in_folder(logger, "TART_assignment_02_files", "txt", "lorem_ipsum", "NOTE_lorem_ipsum", "", "_TEMP")
+    rename_files_in_folder(logger, "TART_assignment_02_files", "png", ("texture", "tex"), "T", "", "_C")                               
 
 if __name__ == '__main__':
     main()
