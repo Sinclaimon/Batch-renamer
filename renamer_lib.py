@@ -182,34 +182,8 @@ def rename_files_in_folder(logger, folder_path, extension, string_to_find,
 def main():
     # Logger
     logger = get_logger(True)
-    logger.info('Logger Initiated')
+    logger.info('Logger Initiated')               
 
-    #   Here are some examples of different logger messages
-    
-    #logger.warning('This would be a logger warning')
-    #logger.error('This would be a logger error!!')
-    #logger.critical('This would be a critical log')
-
-    '''
-    print(get_files_with_extension("testing_files", "ma"))
-    print(get_files_with_extension("testing_files", "ma"))
-    print(get_files_with_extension("testing_empty_folder", "ma"))
-    '''
-
-    rename_files_in_folder(logger, "testing_files", "ma", 
-                                   ("_file_01", "_file_final_new_02"),
-                                   "", "M_", "", False)
-    
-    # Rename .txt files
-    rename_files_in_folder(logger, "testing_files", "txt", "", "",
-                                   "NOTE_", "_TEMP", True)
-    
-    # Rename .png files
-    rename_files_in_folder(logger, "testing_files", "png", 
-                                   ("diffuse", "color"), "C", "", "")
-    rename_files_in_folder(logger, "testing_files", "png",
-                                   ("texture", "tex"), "T", "", "")
-                             
 
 if __name__ == '__main__':
     main()
