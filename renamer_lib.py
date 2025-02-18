@@ -1,6 +1,7 @@
 import logger as logger
 import os
 import shutil
+import collections.abc as collections
 
 def get_logger(print_to_screen = False):
     """
@@ -39,22 +40,25 @@ def get_renamed_file_path(logger, existing_name, string_to_find, string_to_repla
 
     logger.info("Getting renamed file path for: " + existing_name)
     
-
-    #making string_to_find a tuple if it isn't already
-    if not isinstance(string_to_find, tuple):
+    # Making string_to_find a list if it isn't already
+    if not isinstance(string_to_find, collections.Collection) or isinstance(string_to_find, str):
         string_to_find = [string_to_find]
 
     logger.info("number of strings to replace: " + str(len(string_to_find)))
 
-    new_name = existing_name
+    # Split the existing name into base name and extension
+    base_name, extension = os.path.splitext(existing_name)
 
-    #replacing all strings in string_to_find with string_to_replace
-    for i in range(len(string_to_find)):
-        new_name = new_name.replace(string_to_find[i], string_to_replace)
+    # Replacing all strings in string_to_find with string_to_replace
+    for find_str in string_to_find:
+        logger.debug(f"Replacing '{find_str}' with '{string_to_replace}' in '{base_name}'")
+        base_name = base_name.replace(find_str, string_to_replace)
 
-    
-    #make sure to check if its valid? 
-    return prefix + new_name + suffix
+    # Adding prefix and suffix
+    new_name = prefix + base_name + suffix + extension
+    logger.debug(f"Adding prefix '{prefix}' and suffix '{suffix}' to '{new_name}'")
+
+    return new_name
 
 def get_files_with_extension(logger, folder_path, extension):
     """
@@ -75,33 +79,30 @@ def get_files_with_extension(logger, folder_path, extension):
     Make sure to catch and handle errors if the folder doesn't exist!
     '''
 
-    #making sure the folder exists first
-    if os.path.isdir(folder_path) == False:
+    # Making sure the folder exists first
+    if not os.path.isdir(folder_path):
         logger.error("Folder path does not exist")
-        return
+        return []
     
+    logger.info("Getting files with extension: " + extension + " in folder: " + folder_path)
 
-
-    logger.info("Getting files with extension: " + extension + 
-                " in folder: " + folder_path)
-
-    #getting all files in the folder
+    # Getting all files in the folder
     folder_files = next(os.walk(folder_path))[2]
 
-    #list to store all the files with the correct extension
+    # List to store all the files with the correct extension
     matching_files = []
 
-    #iterating through all the files in the folder
+    # Iterating through all the files in the folder
     for file in folder_files:
-        print("working on file: " + file)
+        logger.debug("Working on file: " + file)
         
         # Remove the dot from the extension
         file_extension = os.path.splitext(file)[1][1:]  
-        print("file extension string only: " + file_extension)
+        logger.debug("File extension string only: " + file_extension)
 
-        if (file_extension == extension):
+        if file_extension == extension:
             matching_files.append(file)
-            logger.info("added a matching file: " + file)
+            logger.info("Added a matching file: " + file)
 
     return matching_files
 
@@ -109,7 +110,7 @@ def rename_file(logger, existing_name, new_name, copy=False):
     """
     Renames a file if it exists
     By default, should move the file from its original path to its new path--
-    removing the old file   
+    removing the old file
     If copy is set to True, duplicate the file to the new path
 
     Args:
@@ -128,13 +129,12 @@ def rename_file(logger, existing_name, new_name, copy=False):
     try:
         if copy:
             shutil.copy(existing_name, new_name)
-            logger.info("Copied file: " + existing_name + " to " + new_name)
+            logger.info(f"Copied file from {existing_name} to {new_name}")
         else:
             os.rename(existing_name, new_name)
-            logger.info("Renamed file: " + existing_name + " to " + new_name)
-    except Exception as exception:
-        logger.error("Error renaming file: " + existing_name + " to " + new_name)
-        logger.error(exception)
+            logger.info(f"Renamed file from {existing_name} to {new_name}")
+    except Exception as e:
+        logger.error(f"Failed to rename/copy file from {existing_name} to {new_name}: {e}")
 
 def rename_files_in_folder(logger, folder_path, extension, string_to_find,
                            string_to_replace, prefix, suffix, copy=False):
@@ -172,10 +172,11 @@ def rename_files_in_folder(logger, folder_path, extension, string_to_find,
     '''
     matching_files = get_files_with_extension(logger, folder_path, extension)
     for file in matching_files:
-        existing_file_name = os.path.join(folder_path, file)
-        new_file_name = get_renamed_file_path(logger, file, string_to_find, string_to_replace, prefix, suffix)
-        new_file_name = os.path.join(folder_path, new_file_name)
-        rename_file(logger, existing_file_name, new_file_name, copy)
+        existing_name = os.path.join(folder_path, file)
+        new_name = get_renamed_file_path(logger, file, string_to_find, string_to_replace, prefix, suffix)
+        new_name = os.path.join(folder_path, new_name)
+        logger.debug(f"Renaming file from {existing_name} to {new_name}")
+        rename_file(logger, existing_name, new_name, copy)
 
 
 def main():
@@ -195,10 +196,20 @@ def main():
     print(get_files_with_extension("testing_empty_folder", "ma"))
     '''
 
-    rename_files_in_folder(logger, "TART_assignment_02_files", "ma", "_file_01", "", "M_", "")
-    rename_files_in_folder(logger, "TART_assignment_02_files", "txt", "hello_world", "NOTE_hello_world", "", "_TEMP")
-    rename_files_in_folder(logger, "TART_assignment_02_files", "txt", "lorem_ipsum", "NOTE_lorem_ipsum", "", "_TEMP")
-    rename_files_in_folder(logger, "TART_assignment_02_files", "png", ("texture", "tex"), "T", "", "_C")                               
+    rename_files_in_folder(logger, "testing_files", "ma", 
+                                   ("_file_01", "_file_final_new_02"),
+                                   "", "M_", "", False)
+    
+    # Rename .txt files
+    rename_files_in_folder(logger, "testing_files", "txt", "", "",
+                                   "NOTE_", "_TEMP", True)
+    
+    # Rename .png files
+    rename_files_in_folder(logger, "testing_files", "png", 
+                                   ("diffuse", "color"), "C", "", "")
+    rename_files_in_folder(logger, "testing_files", "png",
+                                   ("texture", "tex"), "T", "", "")
+                             
 
 if __name__ == '__main__':
     main()
