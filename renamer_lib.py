@@ -55,14 +55,11 @@ def get_renamed_file_path(logger, existing_name, string_to_find,
 
     # Replacing all strings in string_to_find with string_to_replace
     for find_str in string_to_find:
-        logger.debug(f"Replacing '{find_str}' with '{string_to_replace}' in '
-                     {base_name}'")
+        logger.debug(f"Replacing '{find_str}' with '{string_to_replace}")
         base_name = base_name.replace(find_str, string_to_replace)
 
     # Adding prefix and suffix
     new_name = prefix + base_name + suffix + extension
-    logger.debug(f"Adding prefix '{prefix}' and suffix '{suffix}' to '
-                 {new_name}'")
 
     return new_name
 
@@ -148,8 +145,7 @@ def rename_file(logger, existing_name, new_name, copy=False):
             os.rename(existing_name, new_name)
             logger.info(f"Renamed file from {existing_name} to {new_name}")
     except Exception as e:
-        logger.error(f"Failed to rename/copy file from {existing_name} to 
-                     {new_name}: {e}")
+        logger.error(f"Failed to rename/copy file to {new_name}: {e}")
 
 def rename_files_in_folder(logger, folder_path, extension, string_to_find,
                            string_to_replace, prefix, suffix, copy=False):
