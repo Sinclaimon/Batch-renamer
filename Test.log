@@ -482,3 +482,67 @@
 2025-02-18 14:51:50,145 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
 2025-02-18 14:51:50,150 - Test Logger 1.0.0 - INFO - Getting renamed file path for: tex_rock_diffuse.png
 2025-02-18 14:51:50,150 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,893 - Test Logger 1.0.0 - INFO - Getting files with extension: ma in folder: testing_files
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - Added a matching file: grass_file_01.ma
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - Added a matching file: metal_file_01.ma
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - Added a matching file: rock_file_final_new_02.ma
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - Getting renamed file path for: grass_file_01.ma
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\grass_file_01.ma to testing_files\M_grass.ma
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - Getting renamed file path for: metal_file_01.ma
+2025-02-18 14:54:31,894 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,895 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\metal_file_01.ma to testing_files\M_metal.ma
+2025-02-18 14:54:31,895 - Test Logger 1.0.0 - INFO - Getting renamed file path for: rock_file_final_new_02.ma
+2025-02-18 14:54:31,895 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,895 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\rock_file_final_new_02.ma to testing_files\M_rock.ma
+2025-02-18 14:54:31,896 - Test Logger 1.0.0 - INFO - Getting files with extension: txt in folder: testing_files
+2025-02-18 14:54:31,896 - Test Logger 1.0.0 - INFO - Added a matching file: hello_world.txt
+2025-02-18 14:54:31,896 - Test Logger 1.0.0 - INFO - Added a matching file: lorem_ipsum.txt
+2025-02-18 14:54:31,896 - Test Logger 1.0.0 - INFO - Getting renamed file path for: hello_world.txt
+2025-02-18 14:54:31,896 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-18 14:54:31,897 - Test Logger 1.0.0 - INFO - Copied file from testing_files\hello_world.txt to testing_files\NOTE_hello_world_TEMP.txt
+2025-02-18 14:54:31,897 - Test Logger 1.0.0 - INFO - Getting renamed file path for: lorem_ipsum.txt
+2025-02-18 14:54:31,897 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-18 14:54:31,899 - Test Logger 1.0.0 - INFO - Copied file from testing_files\lorem_ipsum.txt to testing_files\NOTE_lorem_ipsum_TEMP.txt
+2025-02-18 14:54:31,899 - Test Logger 1.0.0 - INFO - Getting files with extension: png in folder: testing_files
+2025-02-18 14:54:31,899 - Test Logger 1.0.0 - INFO - Added a matching file: texture_grass_color.png
+2025-02-18 14:54:31,899 - Test Logger 1.0.0 - INFO - Added a matching file: texture_metal_diffuse.png
+2025-02-18 14:54:31,899 - Test Logger 1.0.0 - INFO - Added a matching file: tex_rock_diffuse.png
+2025-02-18 14:54:31,899 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_grass_color.png
+2025-02-18 14:54:31,899 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,900 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\texture_grass_color.png to testing_files\texture_grass_C.png
+2025-02-18 14:54:31,900 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_metal_diffuse.png
+2025-02-18 14:54:31,900 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,900 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\texture_metal_diffuse.png to testing_files\texture_metal_C.png
+2025-02-18 14:54:31,900 - Test Logger 1.0.0 - INFO - Getting renamed file path for: tex_rock_diffuse.png
+2025-02-18 14:54:31,900 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,901 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\tex_rock_diffuse.png to testing_files\tex_rock_C.png
+2025-02-18 14:54:31,901 - Test Logger 1.0.0 - INFO - Getting files with extension: png in folder: testing_files
+2025-02-18 14:54:31,901 - Test Logger 1.0.0 - INFO - Added a matching file: texture_grass_C.png
+2025-02-18 14:54:31,901 - Test Logger 1.0.0 - INFO - Added a matching file: texture_metal_C.png
+2025-02-18 14:54:31,901 - Test Logger 1.0.0 - INFO - Added a matching file: tex_rock_C.png
+2025-02-18 14:54:31,901 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_grass_C.png
+2025-02-18 14:54:31,901 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,902 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\texture_grass_C.png to testing_files\T_grass_C.png
+2025-02-18 14:54:31,902 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_metal_C.png
+2025-02-18 14:54:31,902 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,902 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\texture_metal_C.png to testing_files\T_metal_C.png
+2025-02-18 14:54:31,902 - Test Logger 1.0.0 - INFO - Getting renamed file path for: tex_rock_C.png
+2025-02-18 14:54:31,902 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:31,903 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\tex_rock_C.png to testing_files\T_rock_C.png
+2025-02-18 14:54:44,189 - Test Logger 1.0.0 - INFO - Getting renamed file path for: grass_file_01.ma
+2025-02-18 14:54:44,189 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-18 14:54:44,191 - Test Logger 1.0.0 - INFO - Getting renamed file path for: metal_file_01.ma
+2025-02-18 14:54:44,191 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-18 14:54:44,193 - Test Logger 1.0.0 - INFO - Getting renamed file path for: rock_file_final_new_02.ma
+2025-02-18 14:54:44,194 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:44,195 - Test Logger 1.0.0 - INFO - Getting renamed file path for: hello_world.txt
+2025-02-18 14:54:44,195 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-18 14:54:44,197 - Test Logger 1.0.0 - INFO - Getting renamed file path for: lorem_ipsum.txt
+2025-02-18 14:54:44,197 - Test Logger 1.0.0 - INFO - number of strings to replace: 1
+2025-02-18 14:54:44,199 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_grass_color.png
+2025-02-18 14:54:44,199 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:44,245 - Test Logger 1.0.0 - INFO - Getting renamed file path for: texture_metal_diffuse.png
+2025-02-18 14:54:44,245 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
+2025-02-18 14:54:44,249 - Test Logger 1.0.0 - INFO - Getting renamed file path for: tex_rock_diffuse.png
+2025-02-18 14:54:44,250 - Test Logger 1.0.0 - INFO - number of strings to replace: 2

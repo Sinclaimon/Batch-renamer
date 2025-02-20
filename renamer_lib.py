@@ -134,7 +134,7 @@ def rename_file(logger, existing_name, new_name, copy=False):
             os.rename(existing_name, new_name)
             logger.info(f"Renamed file from {existing_name} to {new_name}")
     except Exception as e:
-        logger.error(f"Failed to rename/copy file from {existing_name} to {new_name}: {e}")
+        logger.warning(f"Failed to rename/copy file from {existing_name} to {new_name}: {e}")
 
 def rename_files_in_folder(logger, folder_path, extension, string_to_find,
                            string_to_replace, prefix, suffix, copy=False):
@@ -183,7 +183,6 @@ def main():
     # Logger
     logger = get_logger(True)
     logger.info('Logger Initiated')               
-
 
 if __name__ == '__main__':
     main()
