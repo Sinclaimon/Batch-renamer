@@ -14,8 +14,8 @@ def get_logger(print_to_screen = False):
     return logger.initialize_logger(print_to_screen)
 
 
-def get_renamed_file_path(logger, existing_name, string_to_find, string_to_replace, 
-                          prefix, suffix):
+def get_renamed_file_path(logger, existing_name, string_to_find, 
+                          string_to_replace, prefix, suffix):
     """
     Returns the target file path given an existing file name and 
     string operations
@@ -41,8 +41,12 @@ def get_renamed_file_path(logger, existing_name, string_to_find, string_to_repla
     logger.info("Getting renamed file path for: " + existing_name)
     
     # Making string_to_find a list if it isn't already
-    if not isinstance(string_to_find, collections.Collection) or isinstance(string_to_find, str):
+    if not isinstance(string_to_find, collections.Collection) or isinstance(
+        string_to_find, str):
         string_to_find = [string_to_find]
+
+    if not string_to_find:
+        logger.warning("string_to_find is empty. No replacements.")
 
     logger.info("number of strings to replace: " + str(len(string_to_find)))
 
@@ -51,12 +55,14 @@ def get_renamed_file_path(logger, existing_name, string_to_find, string_to_repla
 
     # Replacing all strings in string_to_find with string_to_replace
     for find_str in string_to_find:
-        logger.debug(f"Replacing '{find_str}' with '{string_to_replace}' in '{base_name}'")
+        logger.debug(f"Replacing '{find_str}' with '{string_to_replace}' in '
+                     {base_name}'")
         base_name = base_name.replace(find_str, string_to_replace)
 
     # Adding prefix and suffix
     new_name = prefix + base_name + suffix + extension
-    logger.debug(f"Adding prefix '{prefix}' and suffix '{suffix}' to '{new_name}'")
+    logger.debug(f"Adding prefix '{prefix}' and suffix '{suffix}' to '
+                 {new_name}'")
 
     return new_name
 
@@ -84,7 +90,8 @@ def get_files_with_extension(logger, folder_path, extension):
         logger.error("Folder path does not exist")
         return []
     
-    logger.info("Getting files with extension: " + extension + " in folder: " + folder_path)
+    logger.info("Getting files with extension: " + extension + " in folder: " 
+                + folder_path)
 
     # Getting all files in the folder
     folder_files = next(os.walk(folder_path))[2]
@@ -103,6 +110,9 @@ def get_files_with_extension(logger, folder_path, extension):
         if file_extension == extension:
             matching_files.append(file)
             logger.info("Added a matching file: " + file)
+
+    if not matching_files:
+        logger.warning(f"No files found with extension: {extension}")
 
     return matching_files
 
@@ -126,6 +136,10 @@ def rename_file(logger, existing_name, new_name, copy=False):
     Copy files using shutil.copy
     make sure to import it at the top of the file
     '''
+    if not os.path.exists(existing_name):
+        logger.warning(f"File {existing_name} does not exist. Skipping.")
+        return
+
     try:
         if copy:
             shutil.copy(existing_name, new_name)
@@ -134,7 +148,8 @@ def rename_file(logger, existing_name, new_name, copy=False):
             os.rename(existing_name, new_name)
             logger.info(f"Renamed file from {existing_name} to {new_name}")
     except Exception as e:
-        logger.warning(f"Failed to rename/copy file from {existing_name} to {new_name}: {e}")
+        logger.error(f"Failed to rename/copy file from {existing_name} to 
+                     {new_name}: {e}")
 
 def rename_files_in_folder(logger, folder_path, extension, string_to_find,
                            string_to_replace, prefix, suffix, copy=False):
@@ -173,7 +188,8 @@ def rename_files_in_folder(logger, folder_path, extension, string_to_find,
     matching_files = get_files_with_extension(logger, folder_path, extension)
     for file in matching_files:
         existing_name = os.path.join(folder_path, file)
-        new_name = get_renamed_file_path(logger, file, string_to_find, string_to_replace, prefix, suffix)
+        new_name = get_renamed_file_path(logger, file, string_to_find, 
+                                         string_to_replace, prefix, suffix)
         new_name = os.path.join(folder_path, new_name)
         logger.debug(f"Renaming file from {existing_name} to {new_name}")
         rename_file(logger, existing_name, new_name, copy)
