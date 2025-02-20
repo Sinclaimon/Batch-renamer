@@ -10,7 +10,6 @@ def get_logger(print_to_screen = False):
     Args:
         print_to_screen: for printing to screen as well as file
     """
-
     return logger.initialize_logger(print_to_screen)
 
 
@@ -41,12 +40,13 @@ def get_renamed_file_path(logger, existing_name, string_to_find,
     logger.info("Getting renamed file path for: " + existing_name)
     
     # Making string_to_find a list if it isn't already
-    if not isinstance(string_to_find, collections.Collection) or isinstance(
-        string_to_find, str):
+    if not isinstance(string_to_find, 
+                      collections.Collection) or isinstance(string_to_find, 
+                                                            str):
         string_to_find = [string_to_find]
 
     if not string_to_find:
-        logger.warning("string_to_find is empty. No replacements.")
+        logger.warning("string_to_find is empty. No replacements made")
 
     logger.info("number of strings to replace: " + str(len(string_to_find)))
 
@@ -55,13 +55,14 @@ def get_renamed_file_path(logger, existing_name, string_to_find,
 
     # Replacing all strings in string_to_find with string_to_replace
     for find_str in string_to_find:
-        logger.debug(f"Replacing '{find_str}' with '{string_to_replace}")
+        logger.debug(f"Replacing '{find_str}' with '{string_to_replace}'")
         base_name = base_name.replace(find_str, string_to_replace)
 
     # Adding prefix and suffix
     new_name = prefix + base_name + suffix + extension
 
     return new_name
+
 
 def get_files_with_extension(logger, folder_path, extension):
     """
@@ -88,7 +89,7 @@ def get_files_with_extension(logger, folder_path, extension):
         return []
     
     logger.info("Getting files with extension: " + extension + " in folder: " 
-                + folder_path)
++ folder_path)
 
     # Getting all files in the folder
     folder_files = next(os.walk(folder_path))[2]
@@ -112,6 +113,7 @@ def get_files_with_extension(logger, folder_path, extension):
         logger.warning(f"No files found with extension: {extension}")
 
     return matching_files
+
 
 def rename_file(logger, existing_name, new_name, copy=False):
     """
@@ -195,6 +197,7 @@ def main():
     # Logger
     logger = get_logger(True)
     logger.info('Logger Initiated')               
+
 
 if __name__ == '__main__':
     main()

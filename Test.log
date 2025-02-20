@@ -595,3 +595,4 @@
 2025-02-20 15:46:08,834 - Test Logger 1.0.0 - INFO - Getting renamed file path for: tex_rock_C.png
 2025-02-20 15:46:08,834 - Test Logger 1.0.0 - INFO - number of strings to replace: 2
 2025-02-20 15:46:08,835 - Test Logger 1.0.0 - INFO - Renamed file from testing_files\tex_rock_C.png to testing_files\T_rock_C.png
+2025-02-20 16:11:30,593 - Test Logger 1.0.0 - INFO - Logger Initiated
